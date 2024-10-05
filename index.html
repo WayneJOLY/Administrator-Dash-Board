@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admimistrator Dash Board</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">  <!--GOOGLE FONTS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="main-container">
+
+            <header class="header">
+                <div class="menu-icon" onclick="openSideBar()">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+
+                <div class="header-left">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </div>
+                <div class="header-right">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="material-symbols-outlined">mail</span>
+                    <span class="material-symbols-outlined">account_circle</span>
+                </div>
+            </header>
+            <aside class="container-menu">
+                    <div class="menu-title">
+                        <div class="brand">
+                            <span class="material-symbols-outlined">shopping_cart</span>Shop
+                        </div>
+                        <span class="material-symbols-outlined" id="closesidebar" onclick="closeSideBar()">close</span>
+                    </div>
+
+                    <ul class="menu-list">
+                        <li class="menu-list-item"><span class="material-symbols-outlined">dashboard</span> Dashboard</li>
+                        <li class="menu-list-item"><span class="material-symbols-outlined">inventory_2</span>Products</li>
+                        <li class="menu-list-item"><span class="material-symbols-outlined">category</span> Category</li>
+                        <li class="menu-list-item"><span class="material-symbols-outlined">groups</span>Customer</li>
+                        <li class="menu-list-item"><span class="material-symbols-outlined">inventory</span>Inventory</li>
+                        <li class="menu-list-item"><span class="material-symbols-outlined">insert_chart</span>Reports</li>
+                        <li class="menu-list-item"><span class="material-symbols-outlined">settings</span> Settings</li>
+                    </ul>
+            </aside>
+
+            <section class="main-content">
+                    <article class="cards">
+                        <div class="card-item">
+                            <div class="card-title">
+                                        <h3>produtcs</h3>
+                                        <span class="material-symbols-outlined">inventory_2</span>
+                            </div>
+                            <h2>255</h2>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-title">
+                                        <h3>produtcs</h3>
+                                        <span class="material-symbols-outlined">inventory_2</span>
+                            </div>
+                            <h2>255</h2>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-title">
+                                        <h3>produtcs</h3>
+                                        <span class="material-symbols-outlined">inventory_2</span>
+                            </div>
+                            <h2>255</h2>
+                        </div>
+                        <div class="card-item">
+                            <div class="card-title">
+                                        <h3>produtcs</h3>
+                                        <span class="material-symbols-outlined">inventory_2</span>
+                            </div>
+                            <h2>255</h2>
+                        </div>
+                    </article>
+
+                    <article class="charts">
+                        <canvas id="myChart" ></canvas> 
+                    </article>
+            </section>
+
+
+    </div>
+
+    
+    <script src="./src/index.js"></script>
+
+    
+
+    <script>
+
+        // Función para generar un número aleatorio entre min y max (incluyendo ambos)
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Crear un arreglo vacío
+let randomNumbers = [];
+
+// Llenar el arreglo con 6 números aleatorios entre 1 y 20
+for (let i = 0; i < 6; i++) {
+    randomNumbers.push(getRandomInt(1, 20));
+}
+
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: [
+    "Gamer Laptop XYZ",
+    "Wireless Headphones ABC",
+    "Smartwatch 2024",
+    "4K Digital Camera",
+    "Ultra Pro Smartphone",
+    "Educational Tablet 10\""
+]           
+,
+            datasets: [{
+              label: 'Best selling products in the last 3 hours'
+              ,
+backgroundColor:[
+    "rgba(255, 99, 71, 1)",   
+    "rgba(135, 206, 235, 1)", 
+    "rgba(75, 0, 130, 1)",   
+    "rgba(60, 179, 113, 1)",  
+    "rgba(255, 215, 0, 1)",   
+    "rgba(123, 104, 238, 1)"  
+] ,
+              data: randomNumbers,
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+
+
+</body>
+</html>
