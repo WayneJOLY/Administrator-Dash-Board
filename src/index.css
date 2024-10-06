@@ -170,10 +170,10 @@ body{
     
     .show-menu{
         position: fixed;
-        top: var(70px);
+        top: 65px;
         left: 0%;
         width: 80%;
-        height: calc(100vh - var(70px));
+        height: calc(100vh - 65px);
         padding: 60px 20px 40px;
         transition: left .5s ease-in-out;
         /*<--!rgba(237, 237, 237,.5)-->*/
