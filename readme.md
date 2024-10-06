@@ -2,7 +2,8 @@
 
 A **dashboard** is a visual tool that allows eCommerce owners to monitor and analyze key metrics of their business. For a small eCommerce, having an effective dashboard is essential to optimize operations and improve decision making.
 
-![eCommerce Dashboard](https://via.placeholder.com/800x400.png?text=eCommerce+Dashboard) <!-- Replace with a real image -->
+![eCommerce Dashboard](./src/images/Captura%20de%20pantalla%202024-10-06%20181617.png) 
+![eCommerce Dashboard](./src/images/Captura%20de%20pantalla%202024-10-06%20181513.png)
 
 ## <span style="color: #2196F3;">Key Contents of an eCommerce Dashboard</span>
 
@@ -49,4 +50,4 @@ To build an effective dashboard, you can use a variety of sources:
 
 A well-designed dashboard allows small eCommerce owners to have a clear view of business performance, identify areas for improvement, and make informed decisions based on concrete data. Effective integration of key metrics is essential for long-term growth and success.
 
-![Dashboard Icons](https://via.placeholder.com/600x100.png?text=Dashboard+Icons) <!-- Replace with a real image -->
+![Dashboard Icons](./src/images/Captura%20de%20pantalla%202024-10-06%20181555.png) 
