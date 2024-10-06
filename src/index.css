@@ -179,6 +179,10 @@ body{
         /*<--!rgba(237, 237, 237,.5)-->*/
     }
 
+    .menu-title{
+        display: flex;
+        justify-content: space-between;
+    }
     .menu-icon{
         display: inline-block;
         cursor: pointer;
@@ -201,5 +205,23 @@ body{
     .charts{
         width: 90%;
         height: auto;
+    }
+}
+
+@media (max-width: 768px){
+
+
+    .header{
+        height: 100px;
+        padding: 20px 0 ;
+    }
+    .menu-icon{
+        margin-left: 40px;
+    }
+    .header-right{
+        margin-right: 40px;
+    }
+    .card-item{
+        margin: 10px auto;
     }
 }
